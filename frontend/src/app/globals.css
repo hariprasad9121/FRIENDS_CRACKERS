@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8f6f1;
+  --foreground: #0a1628;
+}
+
+@theme {
+  --color-background: #f8f6f1;
+  --color-foreground: #0a1628;
+  --color-navy: #0a1628;
+  --color-navy-light: #1e3a5f;
+  --color-gold: #d4af37;
+  --color-orange: #ff6b35;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-geist-sans), system-ui, sans-serif;
+  }
+
+  a {
+    @apply transition-colors;
+  }
+}
